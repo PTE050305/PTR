@@ -19,7 +19,7 @@ export function Hero() {
       <a href={`mailto:${profile.email}`}>email ↗</a>
     </div>
     <div className="hero-actions"><a className="button button-primary" href="/resume.pdf" download>download resume <ArrowUpRight size={14} /></a><Link className="button" href="/contact">get in touch <ArrowUpRight size={14} /></Link></div>
-  </div><div><Image className="portrait" src="/profile-placeholder.svg" alt="Profile image placeholder" width={164} height={164} priority /><div className="stats">{profile.stats.map(([value, label]) => <div className="stat" key={label}><strong>{value}</strong><span>{label}</span></div>)}</div></div></div></section>;
+  </div><div><Image className="portrait" src="/profile-pic.jfif" alt="Peter Victor D. Dawis" width={164} height={164} priority /><div className="stats">{profile.stats.map(([value, label]) => <div className="stat" key={label}><strong>{value}</strong><span>{label}</span></div>)}</div></div></div></section>;
 }
 
 export function AboutPreview() {

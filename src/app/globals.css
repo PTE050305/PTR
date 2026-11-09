@@ -79,7 +79,7 @@ button { font: inherit; }
 .button:hover { transform: translateY(-2px); border-color: var(--accent); }
 .button-primary { background: var(--text-primary); border-color: var(--text-primary); color: var(--background); }
 .button-primary:hover { background: var(--accent-strong); border-color: var(--accent-strong); }
-.portrait { width: 164px; height: 164px; border-radius: 50%; background: radial-gradient(circle at 35% 25%, #f1d59d 0 8%, transparent 9%), radial-gradient(circle at 50% 34%, #a77748 0 17%, transparent 18%), linear-gradient(145deg, #34312c, #181818 56%, #ac8450); border: 1px solid var(--border); box-shadow: inset 0 0 0 8px color-mix(in srgb, var(--background) 30%, transparent); transition: transform .35s ease; }
+.portrait { width: 164px; height: 164px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); box-shadow: inset 0 0 0 8px color-mix(in srgb, var(--background) 30%, transparent); transition: transform .35s ease; }
 .portrait:hover { transform: scale(1.035) rotate(2deg); }
 .stats { display: grid; gap: 17px; padding-bottom: 4px; }
 .stat { border-top: 1px solid var(--border); padding-top: 10px; }
