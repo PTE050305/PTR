@@ -1,0 +1,7 @@
+<svg width="164" height="164" viewBox="0 0 164 164" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="164" height="164" rx="82" fill="#211F1B"/>
+  <circle cx="82" cy="68" r="25" fill="#C5A26A"/>
+  <path d="M37 145C40.5 113.5 57.5 98 82 98C106.5 98 123.5 113.5 127 145" fill="#9A7546"/>
+  <circle cx="82" cy="82" r="73" stroke="#D3A75C" stroke-opacity=".55"/>
+  <text x="82" y="157" fill="#F2F0EB" font-family="monospace" font-size="9" text-anchor="middle" letter-spacing="2">PHOTO</text>
+</svg>
