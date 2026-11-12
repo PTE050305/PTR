@@ -10,7 +10,6 @@ const links = [
   ["Journey", "/journey"],
   ["Stack", "/stack"],
   ["Certifications", "/certifications"],
-  ["Leadership", "/leadership"],
   ["Contact", "/contact"],
 ];
 

@@ -1,0 +1,55 @@
+.card {
+  min-height: 100%;
+  overflow: visible;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--bg);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 4%), 0 12px 32px -8px rgb(0 0 0 / 12%);
+  will-change: transform;
+  animation: stack-float 6s ease-in-out infinite;
+  transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+.card:nth-child(2) { animation-duration: 5.4s; animation-delay: -1.7s; }
+.card:nth-child(3) { animation-duration: 6.6s; animation-delay: -3.1s; }
+.card:nth-child(4) { animation-duration: 5.8s; animation-delay: -4.4s; }
+.card:hover {
+  animation-play-state: paused;
+  border-color: var(--subtle);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 5%), 0 18px 38px -8px rgb(0 0 0 / 18%);
+  transform: translateY(-12px);
+}
+.cardHeader { display: flex; align-items: center; justify-content: space-between; }
+.cardNumber { color: var(--subtle); font: 12px var(--font-mono), monospace; transition: transform .2s ease; }
+.cardArrow { color: var(--subtle); font: 16px var(--font-mono), monospace; transition: transform .2s ease, color .2s ease; }
+.card:hover .cardNumber { transform: translateX(2px); }
+.card:hover .cardArrow { color: var(--fg); transform: translate(2px, -2px); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+@keyframes stack-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@media (max-width: 720px) {
+  .card { animation-name: stack-float-mobile; }
+  .card:hover { transform: translateY(-7px); }
+}
+
+@keyframes stack-float-mobile {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card, .card:nth-child(2), .card:nth-child(3), .card:nth-child(4) {
+    animation: none;
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+  .card:hover { transform: none; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .card { box-shadow: 0 0 0 1px var(--line), 0 12px 32px -12px rgb(0 0 0 / 60%); }
+  .card:hover { box-shadow: 0 0 0 1px var(--subtle), 0 12px 32px -12px rgb(0 0 0 / 60%); }
+}

@@ -1,25 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import { journey, leadership, profile, projects, stack } from "@/data/content";
+import { leadership, profile, projects } from "@/data/content";
+import { Journey } from "./Journey";
+import { Stack } from "./Stack";
 
 export function SectionHeading({ index, title }: { index: string; title: string }) {
   return <div className="section-heading"><span className="section-index">{index}</span><h2>— {title}</h2></div>;
-}
-
-export function Hero() {
-  return <section className="hero"><div className="wrap hero-grid"><div>
-    <div className="kicker">{profile.eyebrow}</div>
-    <h1>{profile.name}</h1>
-    <p className="hero-intro">{profile.intro}</p>
-    <p className="hero-detail">{profile.detail}</p>
-    <div className="hero-links">
-      <a href={profile.github} target="_blank" rel="noreferrer">github ↗</a>
-      <a href={profile.linkedin} target="_blank" rel="noreferrer">linkedin ↗</a>
-      <a href={`mailto:${profile.email}`}>email ↗</a>
-    </div>
-    <div className="hero-actions"><a className="button button-primary" href="/resume.pdf" download>download resume <ArrowUpRight size={14} /></a><Link className="button" href="/contact">get in touch <ArrowUpRight size={14} /></Link></div>
-  </div><div><Image className="portrait" src="/profile-pic.jfif" alt="Peter Victor D. Dawis" width={164} height={164} priority /><div className="stats">{profile.stats.map(([value, label]) => <div className="stat" key={label}><strong>{value}</strong><span>{label}</span></div>)}</div></div></div></section>;
 }
 
 export function AboutPreview() {
@@ -32,11 +18,11 @@ export function ProjectsPreview({ full = false }: { full?: boolean }) {
 }
 
 export function JourneyPreview({ full = false }: { full?: boolean }) {
-  return <section className="section" id="journey"><div className="wrap"><div className="section-topline"><SectionHeading index="03" title="journey" /><Link className="text-link" href="/journey">{full ? "back home ←" : "full history →"}</Link></div><div className="timeline">{journey.map(([year, title, context, summary]) => <div className="timeline-row" key={year}><span className="year">{year}</span><strong>{title}</strong><span>{context} — {summary}</span></div>)}</div></div></section>;
+  return <Journey compact={!full} />;
 }
 
 export function StackPreview({ full = false }: { full?: boolean }) {
-  return <section className="section" id="stack"><div className="wrap"><div className="section-topline"><SectionHeading index="04" title="stack" /><Link className="text-link" href="/stack">{full ? "back home ←" : "what I use →"}</Link></div><div className="grid-list">{stack.map(([num, title, description]) => <div className="grid-item" key={title}><span className="item-num">{num}</span><h3>{title}</h3><p>{description}</p></div>)}</div></div></section>;
+  return <Stack full={full} />;
 }
 
 export function LeadershipPreview() {
