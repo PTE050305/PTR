@@ -1,16 +1,10 @@
 {
   "version": 2,
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/(.*)",
-      "destination": "/$1"
-    },
-    "redirects": [
-        {
-            "source": "/www/(.*)",
-            "destination": "/new-path",
-            "permanent": true
-        }
-    ]
+      "source": "/www/(.*)",
+      "destination": "/new-path",
+      "permanent": true
+    }
   ]
 }
