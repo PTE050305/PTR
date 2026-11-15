@@ -37,7 +37,7 @@ export const projects: Project[] = [
     label: "Capstone",
   },
   {
-    title: "Flying-bee",
+    title: "Flying Bee",
     description: "A focused game project exploring interaction, rules, and feedback.",
     tech: ["C#", "Game development"],
     href: "https://github.com/PTE050305/Flying-bee",
@@ -82,10 +82,7 @@ export const stack = [
   ["learn", "Tools & tech", "GitHub, Java, C, Python, PHP, SQL, and modern web workflows."],
 ];
 
-export const certifications = [
-  ["2025", "Academic and project-based practice", "Documentation, system analysis, and software testing."],
-  ["ongoing", "Continuous learning", "Building a practical foundation for technology roles."],
-];
+export const certifications: string[][] = [];
 
 export const leadership = [
   ["Technical Officer", "Student body organization", "Kept technical work moving and made information easier to access."],

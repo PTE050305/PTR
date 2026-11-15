@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import { leadership, profile, projects } from "@/data/content";
 import { Journey } from "./Journey";
 import { Stack } from "./Stack";
@@ -13,8 +14,9 @@ export function AboutPreview() {
 }
 
 export function ProjectsPreview({ full = false }: { full?: boolean }) {
-  const list = full ? projects : projects.slice(0, 4);
-  return <section className="section" id="projects"><div className="wrap"><div className="section-topline"><SectionHeading index="02" title="projects" /><Link className="text-link" href="/projects">{full ? "back home ←" : "all projects →"}</Link></div><div className="project-list">{list.map((project) => <a className="project-row" href={project.href} target="_blank" rel="noreferrer" key={project.title}><div><div className="project-title">{project.title} {project.label && <span className="project-label">{project.label}</span>}</div><div className="project-description">{project.description}</div><div className="project-meta">{project.tech.map((tech) => <span className="chip" key={tech}>{tech}</span>)}</div></div><span className="project-arrow">↗</span></a>)}</div></div></section>;
+  const list = projects.filter((project) => project.title !== "OncoCare");
+  const visibleProjects = full ? list : list.slice(0, 4);
+  return <section className="section" id="projects"><div className="wrap"><div className="section-topline"><SectionHeading index="02" title="projects" /><Link className="text-link" href="/projects">{full ? "back home ←" : "all projects →"}</Link></div><div className="project-list">{visibleProjects.map((project, index) => <a className="project-row" href={project.href} target="_blank" rel="noreferrer" key={project.title}><span className="project-number">{String(index + 1).padStart(2, "0")}</span><div className="project-info"><div className="project-title">{project.title} {project.label && <span className="project-label">{project.label}</span>}</div><div className="project-description">GitHub repository</div></div><span className="project-view"><FaGithub size={16} /> View</span></a>)}</div></div></section>;
 }
 
 export function JourneyPreview({ full = false }: { full?: boolean }) {

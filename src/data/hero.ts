@@ -40,5 +40,5 @@ export const hero = {
     "PROJECT COORDINATION",
     "PRODUCT THINKING",
   ],
-  photoUrl: "/profile-pic.jfif",
+  photoUrl: "/profile-pic.png",
 } as const;

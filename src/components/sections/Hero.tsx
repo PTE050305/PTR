@@ -28,7 +28,7 @@ export function Hero() {
             </motion.p>
             <motion.p className="mt-4 max-w-[480px] text-sm leading-7 text-[var(--muted)]" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.24 }}>{hero.description}</motion.p>
             <motion.div className="mt-7 flex flex-wrap gap-3" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.3 }}>
-              <Button href="/resume.pdf" download>{hero.buttons.resume}<ArrowDown size={14} className="transition-transform group-hover:translate-y-0.5" /></Button>
+              <Button href="/Peter_Victor_Dawis_CV.pdf" download="Peter_Victor_Dawis_CV.pdf">{hero.buttons.resume}<ArrowDown size={14} className="transition-transform group-hover:translate-y-0.5" /></Button>
               <Button href="#contact" variant="secondary">{hero.buttons.contact}<ArrowUpRight size={14} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" /></Button>
             </motion.div>
             <div className="mt-10"><StatsRow /></div>

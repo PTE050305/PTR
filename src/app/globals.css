@@ -109,14 +109,17 @@ button { font: inherit; }
 .section-topline { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 30px; }
 .text-link { font: 12px var(--font-mono); color: var(--text-secondary); transition: color .2s; }
 .project-list { border-top: 1px solid var(--border); }
-.project-row { display: grid; grid-template-columns: 1fr auto; gap: 28px; padding: 22px 0; border-bottom: 1px solid var(--border); transition: padding .2s, color .2s; }
+.project-row { display: grid; grid-template-columns: 28px 1fr auto; gap: 12px; align-items: center; padding: 13px 0; border-bottom: 1px solid var(--border); transition: padding .2s, color .2s; }
 .project-row:hover { padding-inline: 8px; color: var(--accent-strong); }
+.project-number { color: var(--text-secondary); font: 13px var(--font-mono); }
+.project-info { min-width: 0; }
 .project-title { display: flex; align-items: center; gap: 10px; font-size: 17px; letter-spacing: -.03em; }
 .project-label { font: 10px var(--font-mono); text-transform: uppercase; color: var(--accent); letter-spacing: .08em; }
 .project-description { margin-top: 7px; color: var(--text-secondary); font-size: 13px; line-height: 1.55; }
 .project-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 13px; }
 .project-meta .chip { padding: 5px 8px; font-size: 10px; }
-.project-arrow { color: var(--text-muted); font: 17px var(--font-mono); }
+.project-view { display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--border); border-radius: 999px; padding: 7px 12px; color: var(--text-secondary); font-size: 13px; white-space: nowrap; transition: border-color .2s, color .2s, transform .2s; }
+.project-row:hover .project-view { border-color: var(--text-primary); color: var(--text-primary); transform: translateY(-1px); }
 .timeline { display: grid; border-top: 1px solid var(--border); }
 .timeline-row { display: grid; grid-template-columns: 64px 140px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--border); align-items: baseline; }
 .timeline-row .year { color: var(--accent); font: 11px var(--font-mono); }
@@ -136,7 +139,17 @@ button { font: inherit; }
 .page-hero { padding: 94px 0 76px; }
 .page-hero h1 { max-width: 700px; margin: 18px 0; font-size: clamp(42px, 7vw, 78px); letter-spacing: -.08em; line-height: .95; }
 .page-hero p { max-width: 580px; color: var(--text-secondary); line-height: 1.7; }
-.contact-form { max-width: 620px; display: grid; gap: 18px; }
+.empty-state { max-width: 620px; border: 1px solid var(--border); padding: 32px; }
+.empty-state h2 { margin: 18px 0 8px; font-size: clamp(24px, 4vw, 40px); letter-spacing: -.06em; line-height: 1; }
+.empty-state p { margin: 0; color: var(--text-secondary); font-size: 13px; }
+.contact-links { max-width: 620px; border-top: 1px solid var(--border); }
+.contact-link { display: grid; grid-template-columns: 28px 1fr auto; align-items: center; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--border); transition: padding .2s, color .2s; }
+.contact-link:hover { padding-inline: 8px; color: var(--accent-strong); }
+.contact-link-icon { display: inline-flex; color: var(--text-secondary); }
+.contact-link strong, .contact-link span span { display: block; }
+.contact-link strong { font-size: 15px; font-weight: 500; }
+.contact-link span span { margin-top: 5px; color: var(--text-secondary); font: 12px var(--font-mono); overflow-wrap: anywhere; }
+.contact-link-arrow { color: var(--text-muted); font: 16px var(--font-mono); }
 .field { display: grid; gap: 8px; }
 .field label { font: 11px var(--font-mono); color: var(--text-secondary); }
 .field input, .field textarea { width: 100%; border: 1px solid var(--border); background: var(--surface); color: var(--text-primary); padding: 14px; outline: none; font: 14px var(--font-geist); }
@@ -170,7 +183,7 @@ button { font: inherit; }
   .section { padding: 72px 0; }
   .section-heading { margin-bottom: 28px; }
   .section-intro { font-size: 19px; }
-  .project-row { grid-template-columns: 1fr auto; gap: 12px; }
+  .project-row { grid-template-columns: 24px 1fr auto; gap: 10px; }
   .timeline-row { grid-template-columns: 44px 1fr; gap: 8px 14px; }
   .timeline-row span { grid-column: 2; }
   .grid-list { grid-template-columns: 1fr; }
