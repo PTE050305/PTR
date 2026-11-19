@@ -82,7 +82,29 @@ export const stack = [
   ["learn", "Tools & tech", "GitHub, Java, C, Python, PHP, SQL, and modern web workflows."],
 ];
 
-export const certifications: string[][] = [];
+export type Certification = {
+  title: string;
+  issuer: string;
+  file: string;
+};
+
+export const certifications: Certification[] = [
+  {
+    title: "Wadhwani certificate",
+    issuer: "Certificate of Proficiency – Ideation and Entrepreneurship",
+    file: "/Cert1.png",
+  },
+  {
+    title: "Introduction to AI Literacy and Responsible Use",
+    issuer: "Certificate of Completion – AI Literacy and Responsible AI",
+    file: "/cert2.png",
+  },
+  {
+    title: "TOPCIT Level 2",
+    issuer: "	IT Competency Certification – TOPCIT Level 2",
+    file: "/cert3.png",
+  },
+];
 
 export const leadership = [
   ["Technical Officer", "Student body organization", "Kept technical work moving and made information easier to access."],
