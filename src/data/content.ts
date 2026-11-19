@@ -90,8 +90,8 @@ export type Certification = {
 
 export const certifications: Certification[] = [
   {
-    title: "Wadhwani certificate",
-    issuer: "Certificate of Proficiency – Ideation and Entrepreneurship",
+    title: "Whadhwani Certificate of Proficiency",
+    issuer: "Demonstrates mastery of the program through completion of all mandatory content, at least a 70% quiz average, and a final milestone score of 3.5 or higher.",
     file: "/Cert1.png",
   },
   {
@@ -103,6 +103,16 @@ export const certifications: Certification[] = [
     title: "TOPCIT Level 2",
     issuer: "	IT Competency Certification – TOPCIT Level 2",
     file: "/cert3.png",
+  },
+  {
+    title: "Wadhwani Certificate of program completion",
+    issuer: "Demonstrates completion of the learning content, at least a 70% quiz average, and a milestone score between 2.0 and 3.5.",
+    file: "/cert4.png",
+  },
+  {
+    title: "Wadhwani Certificate of Content Completion",
+    issuer: "Demonstrates completion of all mandatory learning content and achievement of at least a 70% average score in quizzes.",
+    file: "/cert5.png",
   },
 ];
 
