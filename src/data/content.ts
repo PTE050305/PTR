@@ -114,6 +114,11 @@ export const certifications: Certification[] = [
     issuer: "Demonstrates completion of all mandatory learning content and achievement of at least a 70% average score in quizzes.",
     file: "/cert5.png",
   },
+  {
+    title: "CCNA: Switching, Routing, and Wireless Essentials",
+    issuer: "Cisco Networking Academy – offered through Bukidnon State University",
+    file: "/cert6.png",
+  },
 ];
 
 export const leadership = [
